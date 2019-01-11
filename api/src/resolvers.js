@@ -9,6 +9,7 @@ export default {
         request(
           `${API_PRE_LEAGUES}/${input.tournyId}`,
           (error, response, body) => {
+            console.log(error, response, body);
             const data = JSON.parse(body);
             resolve(
               merge(

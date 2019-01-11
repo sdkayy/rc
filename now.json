@@ -1,8 +1,15 @@
 {
-  "version": 2,
-  "public": true,
-  "alias": "rc.sdkay.pw",
-  "env": {
-    "NODE_ENV": "production"
+  "scale": {
+    "sfo": {
+      "min": 2,
+      "max": "auto"
+    }
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "version": 1,
+  "static": {
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
   }
 }
