@@ -6,7 +6,6 @@ import cors from "cors";
 
 import typeDefs from "./schema";
 import resolvers from "./resolvers";
-// import session from "../shared/middleware/session";
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
 const schema = makeExecutableSchema({
   typeDefs,
@@ -15,16 +14,16 @@ const schema = makeExecutableSchema({
 
 const app = express();
 
-app.use(cors("*"));
-
-app.use(
+app.use(cors());
+app.options("*", cors());
+app.get(
   "/graphiql",
   graphiqlExpress({
     endpointURL: "/api"
   })
 );
 
-app.use(
+app.post(
   "/api",
   bodyParser.json(),
   graphqlExpress(req => ({

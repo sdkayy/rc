@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.1.23",
+    "cross-env": "^5.2.0",
     "flow-bin": "^0.89.0",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",

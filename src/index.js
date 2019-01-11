@@ -6,9 +6,9 @@ import Loading from "./components/loading";
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
 const API_URL =
-  process.env.NODE_ENV === "production"
-    ? "prodUrl"
-    : "http://localhost:3001/api";
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3001/api"
+    : "https://api.sdkay.pw/api";
 let client = new ApolloClient({
   uri: API_URL
 });
